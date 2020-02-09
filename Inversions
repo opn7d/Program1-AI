@@ -1,0 +1,18 @@
+fin = open("program_1_data.txt", "r")
+
+# test list
+list1 = [1, 0, 3, 7, 2, 5, 8, 4, 6]
+# init. inversions
+inversions = 0
+
+for i in range(0,8):
+    for j in range(1,9):
+        if list1[i] > list1[j]:
+            inversions += 1
+
+# if list is not solvable, STOP. if list is, solve
+if inversions % 2 == 0:
+    print ("It's Solvable!")
+if inversions % 2 == 1:
+    print ("It's not solvable")
+
